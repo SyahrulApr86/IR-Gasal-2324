@@ -8,6 +8,6 @@
 - [Result TEP2](https://drive.google.com/drive/folders/1r1GxWo7nuyhHX81ipz2UiH-IpNeSR-z6)
 
 ## TP 4
-- [Source Code](https://github.com/SyahrulApr86/IR-Gasal-2324/tree/main)
+- [Source Code](https://github.com/SyahrulApr86/KnowInfo)
 - [TP4](https://drive.google.com/drive/folders/1eZHd9mfsAcaCxyp9g6VIcFpjMoaEDWcJ)
 - [Model TP4](https://drive.google.com/drive/folders/1DNfkZskujfYG9P5-vlvL-xxfv_YJiJnA)
