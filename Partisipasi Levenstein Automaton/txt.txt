@@ -1,0 +1,5 @@
+berikut ini saya telah melakukan eksplorasi dan implementasi dari Levenshtein automaton, dengan sumber: http://blog.notdot.net/2010/07/Damn-Cool-Algorithms-Levenshtein-Automata
+
+Berikut implementasi saya: https://drive.google.com/file/d/1E9EAUybjMapVgFcoBIGT-TONUfrKR-O6/view?usp=sharing
+
+Pada implementasi tersebut saya menggunakan dictionary berikut: https://github.com/dwyl/english-words/blob/master/words_alpha.txt
