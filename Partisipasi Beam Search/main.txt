@@ -1,0 +1,19 @@
+Selamat sore Pa Alfan,
+
+Nama saya Syahrul Apriansyah dengan NPM 2106708311 dari kelas IR izin untuk mengemukakan apa yang saya dapat dari setelah saya membaca referensi mengenai Beam Search yang ada di slice.
+
+Berikut referensi yang saya gunakan:
+- https://www.width.ai/post/what-is-beam-search
+- https://huggingface.co/blog/how-to-generate
+
+Artikel di width.ai membahas mengenai algoritma Beam Search yang merupakan metode penting dalam NLP dan speech recog. Algoritma ini dipilih karena kemampuannya untuk menghasilkan hasil yang lebih akurat dengan mempertimbangkan berbagai kemungkinan keluaran pada setiap tahap dan memilih kombinasi yang memiliki probabilitas tertinggi secara keseluruhan.
+
+Dibandingkan dengan Greedy Search yang hanya memilih kata dengan probabilitas tertinggi pada setiap langkah tanpa memperhatikan konteks yang lebih luas, Beam Search menggunakan parameter yang disebut num_beams untuk mempertimbangkan beberapa hipotesis terbaik pada setiap langkahnya. Ini memungkinkan algoritma untuk menjaga opsi yang mungkin lebih baik di langkah-langkah berikutnya, daripada hanya memilih opsi terbaik secara instan pada satu langkah seperti yang dilakukan Greedy Search.
+
+1. Fungsi beam_search_decoder menerima dua parameter: data, yang merupakan matriks probabilitas kata-kata dan num_beams, yang menentukan jumlah hipotesis terbaik yang akan dipertahankan setiap saat.
+2. sequences diinisialisasi sebagai list yang berisi satu entri, yaitu list kosong untuk sequence kata-kata dan skor 0. Ini mewakili titik awal search.
+3. Fungsi kemudian melakukan iterasi melalui setiap 'baris' dalam data. Setiap 'baris' mewakili probabilitas kata-kata pada suatu langkah waktu tertentu dalam sequence.
+4. Untuk setiap sequence yang ada, fungsi melakukan iterasi lagi setiap elemen 'baris' (yaitu probabilitas setiap kata) dan membuat 'kandidat' sequence baru dengan menambahkan kata tersebut ke sequence yang ada dan mengurangi skor sequence dengan logaritma negatif dari probabilitas kata tersebut. Logaritma negatif digunakan karena probabilitas yang lebih tinggi (lebih dekat ke 1) harus memberikan skor yang lebih rendah (lebih baik).
+5. Setelah itu, semua kandidat (dari semua sequence yang ada dan semua kata yang mungkin) diurutkan berdasarkan skornya, dari yang terbaik (skor terendah) ke yang terburuk (skor tertinggi).
+6. Kemudian, num_beams kandidat teratas dipilih untuk menjadi sequence yang dipertahankan untuk iterasi berikutnya.
+7. Setelah iterasi terakhir, fungsi mengembalikan num_beams sequence teratas sebagai output.
